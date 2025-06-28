@@ -25,7 +25,35 @@ El restaurante: comida y bebida, la carta. Pedimos en un restaurante." />
 <script type="text/javascript" src="udl-content.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
-<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<body class="exe-web-site" id="exe-node-0">
+<button onclick="toggleMenu()" style="position: fixed; top: 10px; left: 10px; z-index: 1000; background-color: #00457c; color: white; padding: 6px 12px; border: none; border-radius: 5px;">
+  Mostrar/Ocultar menú
+</button>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('siteNav');
+    const content = document.getElementById('main-wrapper');
+    const paginationTop = document.getElementById('topPagination');
+    const paginationBottom = document.getElementById('bottomPagination');
+
+    if (nav.style.display === 'none') {
+      nav.style.display = 'block';
+      if (paginationTop) paginationTop.style.marginLeft = '230px';
+      if (paginationBottom) paginationBottom.style.marginLeft = '230px';
+    } else {
+      nav.style.display = 'none';
+      if (paginationTop) paginationTop.style.marginLeft = '0';
+      if (paginationBottom) paginationBottom.style.marginLeft = '0';
+    }
+  }
+
+  // Ocultar el menú por defecto al cargar
+  window.onload = function() {
+    toggleMenu();
+  }
+</script>
+<script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
 <header id="header" ><div id="headerContent">ASIGNATOUR</div></header>
