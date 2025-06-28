@@ -27,54 +27,6 @@ El restaurante: comida y bebida, la carta. Pedimos en un restaurante." />
 </head>
 <body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
 <div id="content">
-
-<style>
-#toggleMenuButton {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 9999;
-  background-color: #00457c;
-  color: white;
-  padding: 8px 14px;
-  border: none;
-  border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
-}
-</style>
-
-<button id="toggleMenuButton" onclick="toggleMenu()">Mostrar/Ocultar menú</button>
-
-<script>
-  function toggleMenu() {
-    const nav = document.getElementById('siteNav');
-    const topPag = document.getElementById('topPagination');
-    const bottomPag = document.getElementById('bottomPagination');
-
-    if (nav.style.display === 'none') {
-      nav.style.display = 'block';
-      if (topPag) topPag.style.marginLeft = '230px';
-      if (bottomPag) bottomPag.style.marginLeft = '230px';
-    } else {
-      nav.style.display = 'none';
-      if (topPag) topPag.style.marginLeft = '0';
-      if (bottomPag) bottomPag.style.marginLeft = '0';
-    }
-  }
-
-  // Ocultar menú al cargar
-  window.onload = function() {
-    const nav = document.getElementById('siteNav');
-    const topPag = document.getElementById('topPagination');
-    const bottomPag = document.getElementById('bottomPagination');
-
-    nav.style.display = 'none';
-    if (topPag) topPag.style.marginLeft = '0';
-    if (bottomPag) bottomPag.style.marginLeft = '0';
-  };
-</script>
-
 <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
 <header id="header" ><div id="headerContent">ASIGNATOUR</div></header>
 <nav id="siteNav">
